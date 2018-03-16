@@ -1,6 +1,6 @@
 <template>
-  <div class="hello center">
-    <h1>{{ msg }}</h1>
+  <div class="hello">
+    <h1 class="center">{{ msg }}</h1>
   </div>
 </template>
 
@@ -15,10 +15,12 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped="sass" lang="scss">
 
-  .center {
-    text-align: center;
+  .hello {
+    .center {
+      text-align: center;
+    }
   }
 
 </style>
