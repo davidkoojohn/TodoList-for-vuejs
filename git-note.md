@@ -24,6 +24,9 @@ git branch
 git merge dev
 # 删除分支
 git branch -d dev
+
+# 禁用 Fast forward
+git merge --no-ff -m "merge with no-ff" dev
 ```
 
 
