@@ -6,6 +6,21 @@
 
 **`总结`: HEAD 就是当前工作区能看到的。**
 
+```
+# 首先，我们创建dev分支，然后切换到dev分支：
+git branch -b dev
+# Switched to a new branch 'dev'
+
+# 上面命令 = 
+git branch dev
+git checkout dev
+
+# 查看本地分支
+git branch
+
+# ... 工作 ing
+
+```
 
 ## 参考
 
