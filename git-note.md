@@ -20,6 +20,10 @@ git branch
 
 # ... 工作 ing
 
+# 合并分支
+git merge dev
+# 删除分支
+git branch -d dev
 ```
 
 ## 参考
