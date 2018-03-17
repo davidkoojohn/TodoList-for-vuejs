@@ -40,6 +40,36 @@ git branch -d feature-vulcan
 # 强行删除
 git branch -D feature-vulcan
 
+git remote -v
+# origin  git@github.com:michaelliao/learngit.git (fetch)
+# origin  git@github.com:michaelliao/learngit.git (push)
+# 上面显示了可以抓取和推送的origin的地址。如果没有推送权限，就看不到push的地址。
+
+git push origin master
+git push origin dev
+# 但是，并不是一定要把本地分支往远程推送，那么，哪些分支需要推送，哪些不需要呢？
+# master分支是主分支，因此要时刻与远程同步；
+# dev分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步；
+# bug分支只用于在本地修复bug，就没必要推到远程了，除非老板要看看你每周到底修复了几个bug；
+# feature分支是否推到远程，取决于你是否和你的小伙伴合作在上面开发。
+
+git clone git@github.com:***
+# 只能看到本地的master分支 git branch
+
+# 如果要在dev分支上开发，就必须创建远程origin的dev分支到本地，于是他用这个命令创建本地dev分支：
+git checkout -b dev origin/dev
+# 现在，他就可以在dev上继续修改，然后，时不时地把dev分支push到远程：
+git push origin dev
+# no tracking information
+
+git pull <remote> <branch>
+# If you wish to set tracking information for this branch you can do so with:
+
+git branch --set-upstream dev origin/<branch>
+# or
+git branch --set-upstream-to=origin/<branch> dev
+# Branch dev set up to track remote branch dev from origin.
+
 git reset HEAD^
 git reset HEAD~100
 git reset 3628164
