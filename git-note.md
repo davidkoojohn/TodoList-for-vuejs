@@ -82,6 +82,12 @@ git reset 3628164
 git diff
 # 是暂存区(stage)和分支(master)的比较
 git diff --cached
+
+git checkout -- file
+# 命令中的--很重要
+git reset HEAD file
+
+git rm
 ```
 
 
