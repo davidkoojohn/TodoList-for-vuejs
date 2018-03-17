@@ -73,6 +73,15 @@ git branch --set-upstream-to=origin/<branch> dev
 git reset HEAD^
 git reset HEAD~100
 git reset 3628164
+
+# 未添加的 Untracked
+# 暂存区 Stage
+# 工作区 work dict
+
+# 是工作区(work dict)和暂存区(stage)的比较
+git diff
+# 是暂存区(stage)和分支(master)的比较
+git diff --cached
 ```
 
 
