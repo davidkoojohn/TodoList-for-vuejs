@@ -50,6 +50,11 @@
         ]
       }
     },
+    watch: {
+      todos() {
+        console.log(this.todos.length)
+      }
+    },
     methods: {
       tryDo: (e) => {
         console.log(e)
