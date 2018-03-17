@@ -39,6 +39,19 @@ git branch -d feature-vulcan
 
 # 强行删除
 git branch -D feature-vulcan
+
+git remote -v
+# origin  git@github.com:michaelliao/learngit.git (fetch)
+# origin  git@github.com:michaelliao/learngit.git (push)
+# 上面显示了可以抓取和推送的origin的地址。如果没有推送权限，就看不到push的地址。
+
+git push origin master
+git push origin dev
+# 但是，并不是一定要把本地分支往远程推送，那么，哪些分支需要推送，哪些不需要呢？
+# master分支是主分支，因此要时刻与远程同步；
+# dev分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步；
+# bug分支只用于在本地修复bug，就没必要推到远程了，除非老板要看看你每周到底修复了几个bug；
+# feature分支是否推到远程，取决于你是否和你的小伙伴合作在上面开发。
 ```
 
 
