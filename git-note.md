@@ -27,6 +27,18 @@ git branch -d dev
 
 # 禁用 Fast forward
 git merge --no-ff -m "merge with no-ff" dev
+
+git stash
+git stash list
+git stash pop
+# git stash pop === git stash apply + git stash drop
+
+git branch -d feature-vulcan
+# error: The branch 'feature-vulcan' is not fully merged.
+# If you are sure you want to delete it, run 'git branch -D feature-vulcan'.
+
+# 强行删除
+git branch -D feature-vulcan
 ```
 
 
