@@ -69,6 +69,10 @@ git branch --set-upstream dev origin/<branch>
 # or
 git branch --set-upstream-to=origin/<branch> dev
 # Branch dev set up to track remote branch dev from origin.
+
+git reset HEAD^
+git reset HEAD~100
+git reset 3628164
 ```
 
 
