@@ -1,11 +1,16 @@
 <template>
   <div class="home-view">
     <ul>
-      <li v-for="(item, index) in todos" :key="item.id">
+      <li v-for="(item, index) in todos" :key="index">
         <input type="checkbox" :checked="item.done"/>
-        <strong @click="tryDo">{{ item.title }}</strong>
+        <strong @click="tryDo">{{ item.title }}{{item.id}}</strong>
       </li>
     </ul>
+    <div>
+      <input v-model="newTodoText"
+             v-on:keyup.enter="addNewTodo"
+             placeholder="Add new todo"/>
+    </div>
   </div>
 </template>
 
@@ -20,6 +25,7 @@
     },
     data() {
       return {
+        newTodoText: '',
         todos: [
           {
             id: 1,
@@ -47,6 +53,15 @@
     methods: {
       tryDo: (e) => {
         console.log(e)
+      },
+      addNewTodo() {
+        const ID = this.todos[this.todos.length -1].id + 1
+        this.todos.push({
+          id: ID,
+          title: this.newTodoText,
+          done: false
+        })
+        this.newTodoText = ''
       }
     }
   }
