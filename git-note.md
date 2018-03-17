@@ -39,6 +39,10 @@ git branch -d feature-vulcan
 
 # 强行删除
 git branch -D feature-vulcan
+
+git reset HEAD^
+git reset HEAD~100
+git reset 3628164
 ```
 
 
