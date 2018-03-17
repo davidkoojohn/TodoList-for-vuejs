@@ -1,10 +1,6 @@
 <template>
   <div class="home-view">
     <ul>
-      <!--
-      v-bind:checked="" === :checked=""
-      v-on:click="" === @click=""
-      -->
       <li v-for="(item, index) in todos" :key="item.id">
         <input type="checkbox" :checked="item.done"/>
         <strong @click="tryDo">{{ item.title }}</strong>
@@ -48,22 +44,6 @@
         ]
       }
     },
-    // 计算属性
-    computed: {
-      // 计算属性的 getter
-      reversedMessage: function () {
-        return this.title.split('').reverse().join('')
-      },
-      now: () => {
-        // 计算属性缓存 vs 方法
-        return Date.now()
-      },
-      fullName() {
-        return `${this.firstName} - ${this.lastName}`
-      }
-    },
-    // 计算属性 vs 侦听属性
-    watch: {},
     methods: {
       tryDo: (e) => {
         console.log(e)
