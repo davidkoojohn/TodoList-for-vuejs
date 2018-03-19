@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import HomeView from '../views/HomeView'
-import SigninView from '../views/SigninView'
+import HomeView from './views/HomeView'
+import SigninView from './views/SigninView'
 
 Vue.use(Router)
 
