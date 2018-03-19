@@ -11,6 +11,7 @@
              v-on:keyup.enter="addNewTodo"
              placeholder="Add new todo"/>
     </div>
+    <router-link :to="{ path: '/signin'}">Sign In</router-link>
   </div>
 </template>
 
