@@ -6,13 +6,9 @@
 
 <script>
 
-  import Todo from '../components/Todo'
-
   export default {
     name: 'signin-view',
-    components: {
-      Todo
-    },
+    components: {},
     data() {
       return {
         title: 'signin-view'
