@@ -12,23 +12,15 @@
              placeholder="Add new todo"/>
     </div>
     <router-link :to="{ path: '/signin'}">Sign In</router-link>
-    <demo :current="2"
-          :total="40"
-          :currentChange="whenChange"></demo>
+
   </div>
 </template>
 
 <script>
 
-  import Todo from '../components/Todo'
-  import Demo from '../components/Demo'
-
   export default {
     name: 'home-view',
-    components: {
-      Todo,
-      Demo
-    },
+    components: {},
     data() {
       return {
         newTodoText: '',
@@ -37,21 +29,6 @@
             id: 1,
             title: 'will do 1',
             done: false
-          },
-          {
-            id: 2,
-            title: 'will do 2',
-            done: true
-          },
-          {
-            id: 3,
-            title: 'will do 3',
-            done: false
-          },
-          {
-            id: 4,
-            title: 'will do 4',
-            done: true
           }
         ]
       }
@@ -74,9 +51,6 @@
           done: false
         })
         this.newTodoText = ''
-      },
-      whenChange(item) {
-        console.log(item)
       }
     }
   }
