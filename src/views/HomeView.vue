@@ -5,6 +5,10 @@
       <menus></menus>
     </div>
 
+    <div>
+      <router-link to="/signin" target="_blank">Sign In</router-link>
+    </div>
+
   </div>
 </template>
 
@@ -19,6 +23,9 @@
     },
     data() {
       return {}
+    },
+    mounted() {
+      console.log(this.$route.path)
     },
     watch: {},
     methods: {}
