@@ -12,7 +12,11 @@
 
 </script>
 
-<style>
+<style lang="scss">
+
+  html {
+    font-size: 10px;
+  }
 
   body {
     margin: 0;

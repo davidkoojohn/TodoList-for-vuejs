@@ -37,6 +37,12 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+
+  .menu {
+    a {
+      font-size: 1.4em;
+    }
+  }
 
 </style>
